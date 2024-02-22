@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> studentNames = Arrays.asList("SIVA", "SUNDARESH", "RAM", "MADDY", "VASE", "ANU", "AAKASH", "RUFINA", "KAVINESH", "ALEX");
+
+        // Use Stream API and lambda expression to filter students whose names start with "A"
+        List<String> studentsWithA = studentNames.stream()
+                .filter(name -> name.startsWith("A"))
+                .collect(Collectors.toList());
+
+        // Print the students with names starting with "A"
+        System.out.println("Students with names starting with 'A': " + studentsWithA);
+    }
+}
+
+
+OUTPUT:
+
+
+/Users/sivasundareshram/Library/Java/JavaVirtualMachines/corretto-21.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=49925:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/sivasundareshram/IdeaProjects/Task 4/out/production/Task 4 Main
+Students with names starting with 'A': [ANU, AAKASH, ALEX]
+
+Process finished with exit code 0
